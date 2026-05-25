@@ -23,10 +23,10 @@
     }
 
     /* badge colours per company */
-    .badge-wst   { background: rgba(20,184,166,0.12); border-color: rgba(20,184,166,0.30); color: #14b8a6; }
-    .badge-ey    { background: rgba(251,191,36,0.12);  border-color: rgba(251,191,36,0.30);  color: #fbbf24; }
-    .badge-cap   { background: rgba(79,142,247,0.12);  border-color: rgba(79,142,247,0.30);  color: #4f8ef7; }
-    .badge-optum { background: rgba(129,140,248,0.12); border-color: rgba(129,140,248,0.30); color: #818cf8; }
+    .badge-wst   { background: #ecfdf5; border-color: #a7f3d0; color: #0d9488; }
+    .badge-ey    { background: #fffbeb; border-color: #fde68a; color: #d97706; }
+    .badge-cap   { background: #eff6ff; border-color: #bfdbfe; color: #2563eb; }
+    .badge-optum { background: #f5f3ff; border-color: #ddd6fe; color: #7c3aed; }
 
     /* tech logos strip */
     .tech-strip {
@@ -40,19 +40,21 @@
       align-items: center;
       gap: 7px;
       padding: 7px 16px;
-      background: var(--bg-card);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
       font-size: 0.82rem;
       font-weight: 500;
       color: var(--text-secondary);
       transition: all var(--transition);
+      box-shadow: var(--shadow-sm);
     }
     .tech-chip i { color: var(--accent-blue); }
     .tech-chip:hover {
       border-color: var(--accent-blue);
-      color: var(--text-primary);
+      color: var(--navy);
       transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
     }
 
     @media (max-width: 1024px) {
@@ -110,7 +112,7 @@
   </section>
 
   <!-- ── Projects Grid ──────────────────────────────────────── -->
-  <section class="section" style="background: var(--bg-primary);">
+  <section class="section" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="projects-grid">
 
@@ -268,7 +270,7 @@
   <section class="section" style="background: var(--bg-secondary); border-top:1px solid var(--border);">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Full Stack</p>
+        <p style="font-size:0.82rem; color:var(--accent-blue); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Full Stack</p>
         <h2 class="section-title">Technologies I've Worked With</h2>
         <div class="divider"></div>
         <p class="section-subtitle">The complete technology landscape across all enterprise projects.</p>

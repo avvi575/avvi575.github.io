@@ -20,49 +20,41 @@
   <!-- NOTE: Copy your photo (01.jpg) to assets/images/profile.jpg before opening in browser -->
 
   <style>
-    /* ── Hero Section ─────────────────────────────────── */
+    /* ── Hero Section ── */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: var(--bg-darkest);
+      background: linear-gradient(135deg, #ebf0ff 0%, #f8fafc 50%, #eff6ff 100%);
       position: relative;
       overflow: hidden;
       padding-top: var(--nav-height);
     }
-
-    /* Particle / dot-grid background */
     .hero-bg {
       position: absolute;
       inset: 0;
       pointer-events: none;
-      overflow: hidden;
     }
     .hero-bg-grid {
       position: absolute;
       inset: 0;
-      background-image:
-        radial-gradient(circle, rgba(79,142,247,0.18) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(37,99,235,0.12) 1px, transparent 1px);
       background-size: 40px 40px;
       animation: bgPan 30s linear infinite;
     }
-    @keyframes bgPan {
-      from { background-position: 0 0; }
-      to   { background-position: 40px 40px; }
-    }
     .hero-glow-1 {
       position: absolute;
-      width: 600px; height: 600px;
+      width: 700px; height: 700px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(79,142,247,0.10) 0%, transparent 70%);
-      top: -100px; left: -100px;
+      background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+      top: -200px; left: -200px;
     }
     .hero-glow-2 {
       position: absolute;
-      width: 400px; height: 400px;
+      width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(34,211,238,0.07) 0%, transparent 70%);
-      bottom: 0; right: 100px;
+      background: radial-gradient(circle, rgba(2,132,199,0.05) 0%, transparent 70%);
+      bottom: -100px; right: 0;
     }
 
     /* Hero layout */
@@ -76,10 +68,10 @@
       padding: 60px 0;
     }
     .hero-greeting {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent-cyan);
-      letter-spacing: 0.12em;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 14px;
       display: flex;
@@ -89,22 +81,20 @@
     .hero-greeting::before {
       content: '';
       display: inline-block;
-      width: 32px; height: 2px;
-      background: var(--accent-cyan);
+      width: 28px; height: 2px;
+      background: var(--accent-blue);
+      border-radius: 1px;
     }
     .hero-name {
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
       font-weight: 800;
       letter-spacing: -0.04em;
       line-height: 1.08;
-      background: linear-gradient(135deg, #f1f5f9 30%, var(--accent-blue) 70%, var(--accent-cyan));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--navy);
       margin-bottom: 18px;
     }
     .hero-role {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
       font-weight: 500;
       color: var(--text-secondary);
       margin-bottom: 22px;
@@ -113,12 +103,8 @@
     .typewriter-wrap {
       display: inline-flex;
       align-items: center;
-      gap: 0;
     }
-    #typewriter {
-      color: var(--accent-blue);
-      font-weight: 600;
-    }
+    #typewriter { color: var(--accent-blue); font-weight: 700; }
     .cursor {
       display: inline-block;
       width: 2px;
@@ -131,7 +117,7 @@
     .hero-summary {
       font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.75;
+      line-height: 1.8;
       max-width: 520px;
       margin-bottom: 32px;
     }
@@ -157,7 +143,7 @@
       text-transform: uppercase;
     }
 
-    /* Right side – photo */
+    /* Photo side */
     .hero-photo-side {
       display: flex;
       align-items: center;
@@ -172,85 +158,88 @@
       position: absolute;
       inset: -12px;
       border-radius: 50%;
-      border: 2px solid transparent;
-      background: linear-gradient(var(--bg-darkest), var(--bg-darkest)) padding-box,
-                  linear-gradient(135deg, var(--accent-blue), var(--accent-cyan), var(--accent-blue)) border-box;
-      animation: rotate-ring 6s linear infinite;
+      border: 3px solid transparent;
+      background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, var(--accent-blue), var(--accent-sky), var(--accent-gold), var(--accent-blue)) border-box;
+      animation: rotate-ring 7s linear infinite;
     }
     .photo-ring-outer::before {
       content: '';
       position: absolute;
-      inset: -6px;
+      inset: -8px;
       border-radius: 50%;
-      border: 1px solid rgba(79,142,247,0.15);
+      border: 1px solid rgba(37,99,235,0.12);
     }
     .photo-img {
       width: 320px; height: 320px;
       border-radius: 50%;
       object-fit: cover;
       object-position: top center;
-      border: 4px solid var(--bg-darkest);
+      border: 5px solid #ffffff;
       position: relative;
       z-index: 1;
-      animation: pulse-glow 4s ease-in-out infinite;
+      box-shadow: 0 8px 40px rgba(37,99,235,0.15), 0 2px 8px rgba(0,0,0,0.08);
+      animation: pulse-ring 4s ease-in-out infinite;
     }
 
     /* Floating tech badges */
     .tech-badge {
       position: absolute;
-      background: var(--bg-card);
-      border: 1px solid var(--border-hover);
+      background: #ffffff;
+      border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-      padding: 7px 14px;
+      padding: 8px 14px;
       font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text-primary);
+      font-weight: 700;
+      color: var(--navy);
       white-space: nowrap;
       z-index: 2;
       display: flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
     }
     .tech-badge i { color: var(--accent-blue); }
-    .tb-1 { top: 10px;  left: -30px;  animation: float 3.2s ease-in-out infinite; }
-    .tb-2 { top: 80px;  right: -40px; animation: float 3.8s ease-in-out infinite 0.5s; }
-    .tb-3 { bottom: 80px; left: -40px; animation: float 4.1s ease-in-out infinite 1s; }
-    .tb-4 { bottom: 20px; right: -20px; animation: float 3.5s ease-in-out infinite 1.5s; }
+    .tb-1 { top: 10px;  left: -40px;  animation: float 3.2s ease-in-out infinite; }
+    .tb-2 { top: 80px;  right: -50px; animation: float 3.8s ease-in-out infinite 0.5s; }
+    .tb-3 { bottom: 80px; left: -50px; animation: float 4.1s ease-in-out infinite 1s; }
+    .tb-4 { bottom: 20px; right: -30px; animation: float 3.5s ease-in-out infinite 1.5s; }
 
-    /* ── Stats section ────────────────────────────────── */
+    /* Stats */
     .stats-section {
       background: var(--bg-secondary);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 0;
+      padding: 60px 0;
     }
 
-    /* ── What I Do cards ──────────────────────────────── */
+    /* What I Do */
     .what-i-do-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
     .what-card {
-      background: var(--bg-card);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 32px 28px;
+      padding: 36px 28px;
       transition: all var(--transition);
       text-align: center;
+      box-shadow: var(--shadow-card);
     }
     .what-card:hover {
       border-color: var(--border-hover);
-      box-shadow: var(--shadow-glow);
+      box-shadow: var(--shadow-hover);
       transform: translateY(-5px);
     }
     .what-icon {
-      width: 60px; height: 60px;
+      width: 64px; height: 64px;
       margin: 0 auto 20px;
       border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(34,211,238,0.08));
-      border: 1px solid rgba(79,142,247,0.25);
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem;
       color: var(--accent-blue);
@@ -258,32 +247,76 @@
     .what-title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--text-primary);
+      color: var(--navy);
       margin-bottom: 12px;
     }
     .what-desc {
       font-size: 0.87rem;
       color: var(--text-secondary);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    /* Responsive overrides */
+    /* CTA strip */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 100%);
+      padding: 60px 0;
+    }
+    .cta-strip h3 { color: #fff; font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; }
+    .cta-strip p  { color: rgba(255,255,255,0.72); font-size: 0.93rem; }
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--accent-blue);
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all var(--transition);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .btn-white:hover {
+      background: var(--accent-blue);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Photo placeholder */
+    .photo-placeholder {
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: #eff6ff;
+      border: 5px solid #fff;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: var(--accent-blue);
+      position: relative;
+      z-index: 1;
+    }
+
     @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-      }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
       .hero-greeting { justify-content: center; }
       .hero-summary  { margin: 0 auto 32px; }
       .hero-actions  { justify-content: center; }
       .hero-socials  { justify-content: center; }
       .photo-ring-wrap { width: 240px; height: 240px; }
       .photo-img { width: 240px; height: 240px; }
+      .photo-placeholder { width: 240px; height: 240px; }
       .tb-1, .tb-2, .tb-3, .tb-4 { display: none; }
     }
     @media (max-width: 768px) {
       .what-i-do-grid { grid-template-columns: 1fr; }
+      .cta-inner { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -377,7 +410,7 @@
           <div class="photo-ring-wrap">
             <div class="photo-ring-outer"></div>
             <img src="assets/images/profile.jpg" alt="Avinash Muduthanapally" class="photo-img" onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder').style.display='flex';" />
-            <div class="photo-placeholder" style="display:none; width:320px; height:320px; border-radius:50%; background:var(--bg-card); border:4px solid var(--bg-darkest); align-items:center; justify-content:center; font-size:5rem; color:var(--accent-blue); position:relative; z-index:1;">
+            <div class="photo-placeholder" style="display:none; width:320px; height:320px; border-radius:50%; background:#eff6ff; border:5px solid #fff; align-items:center; justify-content:center; font-size:5rem; color:var(--accent-blue); position:relative; z-index:1;">
               <i class="fa-solid fa-user"></i>
             </div>
 
@@ -426,10 +459,10 @@
   </section>
 
   <!-- ── What I Do ───────────────────────────────────────────── -->
-  <section class="section" style="background: var(--bg-darkest);">
+  <section class="section" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">What I Do</p>
+        <p style="font-size:0.82rem; color:var(--accent-blue); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">What I Do</p>
         <h2 class="section-title">Core Competencies</h2>
         <div class="divider"></div>
         <p class="section-subtitle">End-to-end data engineering expertise across cloud platforms and enterprise ecosystems.</p>
@@ -456,15 +489,17 @@
   </section>
 
   <!-- ── CTA Strip ────────────────────────────────────────────── -->
-  <section style="background: var(--bg-secondary); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding: 56px 0;">
-    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
-      <div>
-        <h3 style="font-size:1.4rem; font-weight:700; margin-bottom:6px;">Looking for a Senior Data Engineer?</h3>
-        <p style="color:var(--text-secondary); font-size:0.93rem;">Available for senior roles and freelance consulting engagements.</p>
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h3>Looking for a Senior Data Engineer?</h3>
+          <p>Available for senior roles and freelance consulting engagements.</p>
+        </div>
+        <a href="contact.html" class="btn-white">
+          <i class="fa-solid fa-paper-plane"></i> Let's Talk
+        </a>
       </div>
-      <a href="contact.html" class="btn btn-primary">
-        <i class="fa-solid fa-paper-plane"></i> Let's Talk
-      </a>
     </div>
   </section>
 
