@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Avinash Muduthanapally</title>
+  <meta name="description" content="Key projects by Avinash Muduthanapally – enterprise data engineering solutions for Zeus, Petronas, Merck, J&J, and United Health Group." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .project-card-full {
+      grid-column: span 1;
+    }
+
+    /* badge colours per company */
+    .badge-wst   { background: rgba(20,184,166,0.12); border-color: rgba(20,184,166,0.30); color: #14b8a6; }
+    .badge-ey    { background: rgba(251,191,36,0.12);  border-color: rgba(251,191,36,0.30);  color: #fbbf24; }
+    .badge-cap   { background: rgba(79,142,247,0.12);  border-color: rgba(79,142,247,0.30);  color: #4f8ef7; }
+    .badge-optum { background: rgba(129,140,248,0.12); border-color: rgba(129,140,248,0.30); color: #818cf8; }
+
+    /* tech logos strip */
+    .tech-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all var(--transition);
+    }
+    .tech-chip i { color: var(--accent-blue); }
+    .tech-chip:hover {
+      border-color: var(--accent-blue);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 1024px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-badge">AM</div>
+          <span class="nav-logo-text">Avinash<span>.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+          <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+          <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+          <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+          <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+          <a href="contact.html"    class="nav-link nav-cta" data-page="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+    <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+    <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+    <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+    <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+    <a href="contact.html"    class="nav-link nav-cta">Contact</a>
+  </div>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Projects</span>
+      </div>
+      <h1 class="page-hero-title">Key <span class="accent-blue">Projects</span></h1>
+      <p class="page-hero-subtitle">Enterprise-scale data engineering solutions delivered across five major clients.</p>
+    </div>
+  </section>
+
+  <!-- ── Projects Grid ──────────────────────────────────────── -->
+  <section class="section" style="background: var(--bg-primary);">
+    <div class="container">
+      <div class="projects-grid">
+
+        <!-- 1. Zeus -->
+        <div class="project-card animate-on-scroll delay-1" data-tilt>
+          <div class="project-header">
+            <div class="project-name">Zeus – Polymer Extrusion Manufacturing</div>
+            <span class="project-client-badge tag badge-wst">Wright Shore / KetteQ</span>
+          </div>
+          <div class="project-period">
+            <i class="fa-solid fa-calendar"></i> Mar 2025 – Present &nbsp;|&nbsp; <i class="fa-solid fa-circle" style="color:#14b8a6; font-size:0.5rem;"></i>&nbsp; Active
+          </div>
+          <p class="project-desc">
+            Zeus is a leading manufacturer of high-performance polymer extrusions, specializing in fluoropolymer tubing (PTFE, FEP, PFA), heat shrink, and fiber optic coatings serving medical, aerospace, and energy industries. Architected and developed complete data flow covering ingestion from multiple source systems through transformation layers to final reporting outputs.
+          </p>
+          <ul class="project-achievements">
+            <li>Architected full end-to-end data flow from source ingestion through transformation to reporting outputs.</li>
+            <li>Developed reusable ETL/ELT framework components shared across multiple product teams, reducing development effort significantly.</li>
+            <li>Built AI-driven configuration modules enabling rapid client-specific customizations with consolidated cumulative reporting dashboards.</li>
+            <li>Performed Data Modeling and defined Entity Relationship structures for supply chain and aftermarket service management domains.</li>
+          </ul>
+          <div class="tags-row">
+            <span class="tag tag-cyan">Talend Cloud</span>
+            <span class="tag">In-House Engine Jobs</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Data Modeling</span>
+            <span class="tag">AI Configuration</span>
+          </div>
+        </div>
+
+        <!-- 2. Petronas -->
+        <div class="project-card animate-on-scroll delay-2" data-tilt>
+          <div class="project-header">
+            <div class="project-name">Petronas – Enterprise Data Hub</div>
+            <span class="project-client-badge tag badge-ey">Ernst &amp; Young</span>
+          </div>
+          <div class="project-period">
+            <i class="fa-solid fa-calendar"></i> Dec 2021 – Mar 2025 &nbsp;|&nbsp; Team of 10+
+          </div>
+          <p class="project-desc">
+            End-to-end enterprise data hub for Petronas, the Malaysian national oil and gas company. Designed and built a scalable Medallion Architecture on Azure Databricks to consolidate data from heterogeneous source systems into a unified analytics platform supporting enterprise BI and reporting.
+          </p>
+          <ul class="project-achievements">
+            <li>Designed Databricks Framework for Medallion Architecture (Bronze/Silver/Gold layers) with Delta Live Tables.</li>
+            <li>Developed ADF ELT pipelines extracting from .json, .xml, .csv, .xlsx, and API sources into ADLS.</li>
+            <li>Created metadata-driven Databricks Workflows enabling reusable, configurable pipeline orchestration.</li>
+            <li>Led the ETL team of 10+ engineers and managed deliverables across multiple project tracks with zero escalations.</li>
+            <li>Utilized Bulk Execution operations to load data into Azure Synapse Analytics at enterprise scale.</li>
+          </ul>
+          <div class="tags-row">
+            <span class="tag tag-gold">Azure Databricks</span>
+            <span class="tag tag-gold">Azure Data Factory</span>
+            <span class="tag tag-gold">ADLS</span>
+            <span class="tag tag-gold">Azure Synapse</span>
+            <span class="tag">Talend</span>
+            <span class="tag">Delta Live Tables</span>
+            <span class="tag">Postman</span>
+          </div>
+        </div>
+
+        <!-- 3. Merck -->
+        <div class="project-card animate-on-scroll delay-3" data-tilt>
+          <div class="project-header">
+            <div class="project-name">Merck – Data Transformation &amp; Automation</div>
+            <span class="project-client-badge tag badge-ey">Ernst &amp; Young</span>
+          </div>
+          <div class="project-period">
+            <i class="fa-solid fa-calendar"></i> Jun 2021 – Dec 2021
+          </div>
+          <p class="project-desc">
+            Data transformation and forecast automation initiative for Merck, a global pharmaceutical leader. Automated complex forecast reporting workflows that previously required significant manual effort, delivering data directly into business dashboards via Power Automate.
+          </p>
+          <ul class="project-achievements">
+            <li>Created MSSQL Stored Procedures for complex data transformations supporting forecast reporting.</li>
+            <li>Reduced manual reporting effort by 20x through full automation of forecast information onto business dashboards.</li>
+            <li>Developed database views for downstream applications consuming data via Power Automate workflows.</li>
+            <li>Collaborated with Business Analysis team for requirements gathering and technical documentation.</li>
+          </ul>
+          <div class="tags-row">
+            <span class="tag">MSSQL</span>
+            <span class="tag">Stored Procedures</span>
+            <span class="tag">Power Automate</span>
+            <span class="tag">SQL Views</span>
+            <span class="tag tag-green">20x Automation</span>
+          </div>
+        </div>
+
+        <!-- 4. Johnson & Johnson -->
+        <div class="project-card animate-on-scroll delay-1" data-tilt>
+          <div class="project-header">
+            <div class="project-name">Johnson &amp; Johnson – ETL Development</div>
+            <span class="project-client-badge tag badge-cap">Capgemini</span>
+          </div>
+          <div class="project-period">
+            <i class="fa-solid fa-calendar"></i> Oct 2019 – Jun 2021
+          </div>
+          <p class="project-desc">
+            Enterprise ETL development for Johnson &amp; Johnson's global data operations. Designed and built end-to-end Talend jobs handling large-volume data from heterogeneous sources including Salesforce CRM, Oracle, MSSQL, and AWS S3 into Redshift and downstream analytics systems.
+          </p>
+          <ul class="project-achievements">
+            <li>Designed end-to-end ETL jobs from dev to production by analyzing BRDs and STM mappings.</li>
+            <li>Implemented performance tuning strategies for jobs handling large data volumes, reducing job execution times.</li>
+            <li>Used Salesforce components in Talend for loading data to Salesforce objects with field-level mapping.</li>
+            <li>Ingested large files from various sources into AWS S3 with complex data transformations and validation.</li>
+            <li>Implemented SCD Type-1, Type-2, and Type-3 dimensional table logic for data warehouse population.</li>
+          </ul>
+          <div class="tags-row">
+            <span class="tag">Talend</span>
+            <span class="tag">Control M</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">MSSQL</span>
+            <span class="tag">Redshift</span>
+            <span class="tag">Salesforce</span>
+            <span class="tag">AWS S3</span>
+            <span class="tag">MBox</span>
+          </div>
+        </div>
+
+        <!-- 5. United Health Group -->
+        <div class="project-card animate-on-scroll delay-2" data-tilt>
+          <div class="project-header">
+            <div class="project-name">United Health Group – Data Warehousing &amp; ETL</div>
+            <span class="project-client-badge tag badge-optum">Optum</span>
+          </div>
+          <div class="project-period">
+            <i class="fa-solid fa-calendar"></i> Feb 2015 – Oct 2019
+          </div>
+          <p class="project-desc">
+            Enterprise data warehousing and ETL platform for United Health Group, one of the largest health insurance companies in the US. Led the strategic migration from IBM DataStage to Talend, modernizing the ETL infrastructure and establishing reusable framework patterns.
+          </p>
+          <ul class="project-achievements">
+            <li>Led DataStage to Talend migration initiative, ensuring functional parity for all legacy ETL jobs.</li>
+            <li>Developed data mappings between source systems and warehouse components using Mapping Designer.</li>
+            <li>Created reusable joblets and developed checkpoint framework and centralized logging mechanisms.</li>
+            <li>Implemented SCD mapping logic for Type-1 and Type-2 dimension table maintenance.</li>
+            <li>Managed CI/CD pipeline deployments using Jenkins, XL Release, and XL Deploy across environments.</li>
+          </ul>
+          <div class="tags-row">
+            <span class="tag tag-purple">Talend</span>
+            <span class="tag tag-purple">MSSQL</span>
+            <span class="tag tag-purple">Oracle</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">XL Release</span>
+            <span class="tag">XL Deploy</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">TAC</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Technologies Section ───────────────────────────────── -->
+  <section class="section" style="background: var(--bg-secondary); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Full Stack</p>
+        <h2 class="section-title">Technologies I've Worked With</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">The complete technology landscape across all enterprise projects.</p>
+      </div>
+
+      <div class="tech-strip animate-on-scroll">
+        <div class="tech-chip"><i class="fa-solid fa-gears"></i> Talend Data Integration</div>
+        <div class="tech-chip"><i class="fa-solid fa-gears"></i> Talend Cloud</div>
+        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Data Factory</div>
+        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Databricks</div>
+        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Data Lake Storage</div>
+        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Synapse Analytics</div>
+        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure DevOps</div>
+        <div class="tech-chip"><i class="fa-brands fa-aws"></i> AWS S3</div>
+        <div class="tech-chip"><i class="fa-solid fa-database"></i> Oracle</div>
+        <div class="tech-chip"><i class="fa-solid fa-database"></i> Microsoft SQL Server</div>
+        <div class="tech-chip"><i class="fa-solid fa-database"></i> Amazon Redshift</div>
+        <div class="tech-chip"><i class="fa-solid fa-cloud"></i> Salesforce</div>
+        <div class="tech-chip"><i class="fa-solid fa-code"></i> SQL / PL-SQL</div>
+        <div class="tech-chip"><i class="fa-solid fa-code-branch"></i> Delta Live Tables</div>
+        <div class="tech-chip"><i class="fa-solid fa-layer-group"></i> Medallion Architecture</div>
+        <div class="tech-chip"><i class="fa-brands fa-jenkins"></i> Jenkins</div>
+        <div class="tech-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+        <div class="tech-chip"><i class="fa-brands fa-bitbucket"></i> Bitbucket</div>
+        <div class="tech-chip"><i class="fa-solid fa-boxes-stacked"></i> Nexus Repository</div>
+        <div class="tech-chip"><i class="fa-solid fa-calendar-check"></i> Control M</div>
+        <div class="tech-chip"><i class="fa-solid fa-list-check"></i> Jira</div>
+        <div class="tech-chip"><i class="fa-solid fa-paper-plane"></i> Postman</div>
+        <div class="tech-chip"><i class="fa-solid fa-bolt"></i> Power Automate</div>
+        <div class="tech-chip"><i class="fa-solid fa-robot"></i> AI Configuration</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Avinash Muduthanapally. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

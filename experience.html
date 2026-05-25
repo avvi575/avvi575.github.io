@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience – Avinash Muduthanapally</title>
+  <meta name="description" content="Work experience of Avinash Muduthanapally – Senior Data Engineer with roles at EY, Capgemini, Optum, and Wright Shore Technologies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Company color accents */
+    .co-wst   { --co: #14b8a6; }
+    .co-ey    { --co: #fbbf24; }
+    .co-cap   { --co: #4f8ef7; }
+    .co-optum { --co: #818cf8; }
+
+    .company-color-bar {
+      width: 4px;
+      border-radius: 2px;
+      background: var(--co);
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+    }
+    .timeline-card { padding-left: 32px; }
+
+    .company-logo-icon {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+    }
+    .logo-wst   { background: linear-gradient(135deg, #14b8a6, #06b6d4); }
+    .logo-ey    { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #1a1a1a; }
+    .logo-cap   { background: linear-gradient(135deg, #4f8ef7, #22d3ee); }
+    .logo-optum { background: linear-gradient(135deg, #818cf8, #6366f1); }
+
+    .exp-header-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .exp-header-text { flex: 1; min-width: 0; }
+
+    /* Alternating slide animation */
+    .timeline-item:nth-child(odd)  .timeline-card { }
+    .timeline-item:nth-child(even) .timeline-card { }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-badge">AM</div>
+          <span class="nav-logo-text">Avinash<span>.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+          <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+          <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+          <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+          <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+          <a href="contact.html"    class="nav-link nav-cta" data-page="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+    <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+    <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+    <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+    <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+    <a href="contact.html"    class="nav-link nav-cta">Contact</a>
+  </div>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Experience</span>
+      </div>
+      <h1 class="page-hero-title">Work <span class="accent-blue">Experience</span></h1>
+      <p class="page-hero-subtitle">11+ years across enterprise data engineering, ETL architecture, and technical leadership.</p>
+    </div>
+  </section>
+
+  <!-- ── Timeline ───────────────────────────────────────────── -->
+  <section class="section" style="background: var(--bg-primary);">
+    <div class="container">
+      <div class="timeline" style="max-width: 860px; margin: 0 auto;">
+
+        <!-- 1. Wright Shore Technologies -->
+        <div class="timeline-item slide-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card card co-wst" style="position:relative; overflow:hidden;">
+            <div class="company-color-bar"></div>
+            <div class="exp-header-row">
+              <div class="company-logo-icon logo-wst">WST</div>
+              <div class="exp-header-text">
+                <div class="timeline-company">
+                  <div>
+                    <div class="company-name">Wright Shore Technologies Pvt Ltd</div>
+                    <div class="company-role">Senior Technical Consultant – Solution Architect &amp; ETL Lead</div>
+                    <div class="company-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> Hyderabad, India (WFH)</span>
+                      <span><i class="fa-solid fa-building"></i> ODC for KetteQ</span>
+                    </div>
+                  </div>
+                  <div class="timeline-period">Mar 2025 – Present</div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Responsible for end-to-end architecture of the data flow across the entire system, defining data models and Entity Relationship structures for supply chain and aftermarket service management domains.</li>
+              <li>Designed and developed ELT and ETL pipelines using Talend Cloud and in-house engine jobs, ensuring reliable data movement from multiple source systems through transformation layers to final reporting outputs.</li>
+              <li>Developed generic pipeline solutions providing reusable common functions and standardized patterns adopted across multiple product teams.</li>
+              <li>Built multiple AI-based implementations to deliver customized configurations to clients, enabling rapid onboarding and client-specific data transformations.</li>
+              <li>Developed reusable ETL/ELT framework components shared across multiple product teams, significantly reducing development effort and improving consistency.</li>
+              <li>Built AI-driven configuration modules enabling client-specific customizations with consolidated cumulative reporting dashboards.</li>
+            </ul>
+
+            <div class="tags-row">
+              <span class="tag tag-cyan">Talend Cloud</span>
+              <span class="tag">In-House Engine Jobs</span>
+              <span class="tag">SQL</span>
+              <span class="tag tag-cyan">Data Modeling</span>
+              <span class="tag">AI Configuration</span>
+              <span class="tag">Supply Chain</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Ernst & Young -->
+        <div class="timeline-item slide-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card card co-ey" style="position:relative; overflow:hidden;">
+            <div class="company-color-bar"></div>
+            <div class="exp-header-row">
+              <div class="company-logo-icon logo-ey">EY</div>
+              <div class="exp-header-text">
+                <div class="timeline-company">
+                  <div>
+                    <div class="company-name">Ernst &amp; Young (EY GDS)</div>
+                    <div class="company-role">Senior II – Data Engineer / Technical Lead</div>
+                    <div class="company-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> India</span>
+                      <span><i class="fa-solid fa-users"></i> Team of 10+</span>
+                    </div>
+                  </div>
+                  <div class="timeline-period">Jun 2021 – Mar 2025</div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Senior ETL Developer and Technical Lead for Petronas and Merck enterprise data projects, ensuring high-quality deliverables with zero escalations.</li>
+              <li>Designed and developed Databricks Framework for Medallion Architecture (Bronze/Silver/Gold layers), loading data through multiple transformation stages with Delta Live Tables.</li>
+              <li>Developed Azure Data Factory ELT pipelines to extract data from multiple heterogeneous sources (.json, .xml, .csv, .xlsx, APIs) into Azure Data Lake Storage.</li>
+              <li>Created Databricks Workflows using Generic Framework with metadata-driven notebook execution, enabling reusable and configurable pipeline orchestration.</li>
+              <li>Designed Source-to-Bronze parquet file generation and loaded Delta Live Tables in Silver and Gold layers for analytical consumption.</li>
+              <li>Utilized Bulk Execution operations to load data into Azure Synapse Analytics from various source systems at scale.</li>
+              <li>Led team collaboration through Azure DevOps board, created user stories and managed deliverables across Agile sprints.</li>
+              <li>Acted as Technical Lead providing technical support and ensuring zero escalations in client interactions across onshore and offshore teams.</li>
+            </ul>
+
+            <div class="tags-row">
+              <span class="tag tag-gold">Azure Databricks</span>
+              <span class="tag tag-gold">Azure Data Factory</span>
+              <span class="tag">Talend</span>
+              <span class="tag tag-gold">ADLS</span>
+              <span class="tag tag-gold">Azure Synapse</span>
+              <span class="tag">Medallion Architecture</span>
+              <span class="tag">Delta Live Tables</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Azure DevOps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Capgemini -->
+        <div class="timeline-item slide-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card card co-cap" style="position:relative; overflow:hidden;">
+            <div class="company-color-bar"></div>
+            <div class="exp-header-row">
+              <div class="company-logo-icon logo-cap">CAP</div>
+              <div class="exp-header-text">
+                <div class="timeline-company">
+                  <div>
+                    <div class="company-name">Capgemini Technology Services India Ltd</div>
+                    <div class="company-role">Consultant – ETL Developer</div>
+                    <div class="company-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> India</span>
+                    </div>
+                  </div>
+                  <div class="timeline-period">Oct 2019 – Jun 2021</div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Worked with Business Analysis team gathering requirements and creating detailed ETL specification documents aligned with BRDs and STM mappings.</li>
+              <li>Used Control M for scheduling and TAC for job deployment; managed Nexus repository deployments and version control across environments.</li>
+              <li>Analyzed BRDs and STM mappings to design Talend ETL jobs end-to-end from development through UAT to production.</li>
+              <li>Developed and implemented performance tuning strategies for jobs handling large data volumes, significantly reducing execution times.</li>
+              <li>Used Salesforce components in Talend for loading data to Salesforce objects including custom object mapping and field-level transformations.</li>
+              <li>Ingested large files from various heterogeneous sources into AWS S3 bucket with complex data transformations and validation logic.</li>
+              <li>Implemented SCD Type-1, Type-2, and Type-3 Dimensional table logic for data warehouse population.</li>
+            </ul>
+
+            <div class="tags-row">
+              <span class="tag">Talend</span>
+              <span class="tag">Control M</span>
+              <span class="tag">TAC</span>
+              <span class="tag">Oracle</span>
+              <span class="tag">MSSQL</span>
+              <span class="tag">Amazon Redshift</span>
+              <span class="tag">Salesforce</span>
+              <span class="tag">AWS S3</span>
+              <span class="tag">Nexus</span>
+              <span class="tag">SCD Types</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Optum -->
+        <div class="timeline-item slide-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card card co-optum" style="position:relative; overflow:hidden;">
+            <div class="company-color-bar"></div>
+            <div class="exp-header-row">
+              <div class="company-logo-icon logo-optum">OPT</div>
+              <div class="exp-header-text">
+                <div class="timeline-company">
+                  <div>
+                    <div class="company-name">Optum Global Solutions Pvt Ltd</div>
+                    <div class="company-role">Software Engineer – ETL Developer</div>
+                    <div class="company-meta">
+                      <span><i class="fa-solid fa-location-dot"></i> Hyderabad, India</span>
+                      <span><i class="fa-solid fa-building"></i> United Health Group</span>
+                    </div>
+                  </div>
+                  <div class="timeline-period">Feb 2015 – Oct 2019</div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="timeline-bullets">
+              <li>Interacted with Business Analysis team for requirements gathering, translating functional specifications into technical ETL designs.</li>
+              <li>Led Data Stage to Talend migration initiative for legacy ETL jobs, ensuring functional parity and improved maintainability of migrated pipelines.</li>
+              <li>Developed Talend mappings using multiple Talend components including tMap, tJoin, tAggregate, tSortRow, and custom Java routines.</li>
+              <li>Created reusable joblets and developed checkpoint framework and logging mechanisms to standardize error handling across all ETL jobs.</li>
+              <li>Implemented Slowly Changing Dimension (SCD) mapping logic for Type-1, Type-2 dimension table maintenance in the enterprise data warehouse.</li>
+              <li>Carried out unit testing and peer reviews; managed export/import of Talend jobs and coordinated deployments across environments using Jenkins and XL Release.</li>
+            </ul>
+
+            <div class="tags-row">
+              <span class="tag tag-purple">Talend</span>
+              <span class="tag tag-purple">MSSQL</span>
+              <span class="tag tag-purple">Oracle</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">XL Release</span>
+              <span class="tag">XL Deploy</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">TAC</span>
+              <span class="tag">DataStage Migration</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+  <section style="background: var(--bg-secondary); border-top:1px solid var(--border); padding: 56px 0;">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:6px;">Want to see my project work?</h3>
+        <p style="color:var(--text-secondary); font-size:0.93rem;">Explore the enterprise-scale data projects I have delivered.</p>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="projects.html" class="btn btn-primary"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+        <a href="Avinash_Muduthanapally_Resume (1).pdf" class="btn btn-secondary" target="_blank"><i class="fa-solid fa-download"></i> Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Avinash Muduthanapally. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

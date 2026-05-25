@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Avinash Muduthanapally</title>
+  <meta name="description" content="Get in touch with Avinash Muduthanapally – Senior Data Engineer available for senior roles and freelance consulting." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+
+    .contact-form-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .contact-form-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .availability-banner {
+      background: linear-gradient(135deg, rgba(79,142,247,0.08), rgba(34,211,238,0.05));
+      border: 1px solid rgba(79,142,247,0.25);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .availability-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      flex-shrink: 0;
+      box-shadow: 0 0 8px rgba(34,197,94,0.6);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 8px rgba(34,197,94,0.6); }
+      50%       { box-shadow: 0 0 18px rgba(34,197,94,0.9); }
+    }
+    .availability-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .availability-text strong { color: var(--text-primary); }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-badge">AM</div>
+          <span class="nav-logo-text">Avinash<span>.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+          <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+          <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+          <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+          <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+          <a href="contact.html"    class="nav-link nav-cta" data-page="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+    <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+    <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+    <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+    <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+    <a href="contact.html"    class="nav-link nav-cta">Contact</a>
+  </div>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Contact</span>
+      </div>
+      <h1 class="page-hero-title">Get In <span class="accent-blue">Touch</span></h1>
+      <p class="page-hero-subtitle">Available for senior data engineering roles and freelance consulting engagements.</p>
+    </div>
+  </section>
+
+  <!-- ── Contact Section ────────────────────────────────────── -->
+  <section class="section" style="background: var(--bg-primary);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Form -->
+        <div class="slide-left">
+          <div class="contact-form-card">
+            <h2 class="contact-form-title">Send a Message</h2>
+            <p class="contact-form-subtitle">I'll get back to you within 24 hours.</p>
+
+            <div class="availability-banner">
+              <div class="availability-dot"></div>
+              <div class="availability-text">
+                <strong>Available for opportunities</strong> – Open to senior data engineering roles and freelance consulting projects globally.
+              </div>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="John" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john.smith@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Senior Data Engineer role – Bangalore" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about the opportunity or project you have in mind..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="slide-right">
+          <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:12px;">Contact Details</p>
+          <h3 style="font-size:1.5rem; font-weight:700; margin-bottom:8px; line-height:1.2;">Let's connect and<br/>build something great.</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.7; margin-bottom:28px;">
+            Whether you're looking to hire a senior data engineer, need help architecting a cloud data platform, or want to discuss a freelance engagement — I'd love to hear from you.
+          </p>
+
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">
+                <a href="mailto:avinash.muduthanapally@gmail.com">avinash.muduthanapally@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="contact-info-label">Phone</div>
+              <div class="contact-info-value">
+                <a href="tel:+918977763090">+91-8977763090</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-value">Hyderabad, Telangana, India</div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div>
+              <div class="contact-info-label">LinkedIn</div>
+              <div class="contact-info-value">
+                <a href="https://www.linkedin.com/in/avinash-muduthanapally/" target="_blank">linkedin.com/in/avinash-muduthanapally</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <div class="contact-info-label">GitHub</div>
+              <div class="contact-info-value">
+                <a href="https://github.com/avvi575" target="_blank">github.com/avvi575</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social row -->
+          <div style="margin-top:28px;">
+            <p style="font-size:0.78rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; font-weight:600; margin-bottom:14px;">Find me on</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/avinash-muduthanapally/" target="_blank" class="social-link" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/avvi575" target="_blank" class="social-link" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:avinash.muduthanapally@gmail.com" class="social-link" title="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:+918977763090" class="social-link" title="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Resume download -->
+          <div style="margin-top:28px; padding:20px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md);">
+            <div style="font-size:0.88rem; font-weight:600; margin-bottom:6px;">Want my full resume?</div>
+            <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:14px;">Download my complete resume with detailed project and skills information.</div>
+            <a href="Avinash_Muduthanapally_Resume (1).pdf" class="btn btn-outline-gold" style="width:100%; justify-content:center;" target="_blank">
+              <i class="fa-solid fa-download"></i> Download Resume (PDF)
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ / Notes strip ───────────────────────────────────── -->
+  <section style="background: var(--bg-secondary); border-top:1px solid var(--border); padding: 56px 0;">
+    <div class="container">
+      <div class="section-header animate-on-scroll" style="margin-bottom:36px;">
+        <h3 class="section-title" style="font-size:1.6rem;">Frequently Asked</h3>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:20px; max-width:960px; margin:0 auto;">
+
+        <div class="card animate-on-scroll delay-1">
+          <div style="color:var(--accent-blue); font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-briefcase"></i></div>
+          <div style="font-weight:700; margin-bottom:8px; font-size:0.95rem;">Open to relocation?</div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.65;">Currently based in Hyderabad. Open to remote roles globally and willing to discuss relocation for the right senior opportunity.</div>
+        </div>
+
+        <div class="card animate-on-scroll delay-2">
+          <div style="color:var(--accent-blue); font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-handshake"></i></div>
+          <div style="font-weight:700; margin-bottom:8px; font-size:0.95rem;">Freelance consulting?</div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.65;">Yes, available for freelance data engineering and ETL architecture consulting on project or retainer basis.</div>
+        </div>
+
+        <div class="card animate-on-scroll delay-3">
+          <div style="color:var(--accent-blue); font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-clock"></i></div>
+          <div style="font-weight:700; margin-bottom:8px; font-size:0.95rem;">Response time?</div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.65;">I typically respond to all messages within 24 hours during business days. Urgent enquiries can reach me by phone.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Avinash Muduthanapally. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

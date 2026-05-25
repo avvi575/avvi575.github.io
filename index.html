@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avinash Muduthanapally – Senior Data Engineer</title>
+  <meta name="description" content="Senior Data Engineer with 11+ years of experience in ETL, Azure Databricks, Talend, and cloud data pipelines." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- NOTE: Copy your photo (01.jpg) to assets/images/profile.jpg before opening in browser -->
+
+  <style>
+    /* ── Hero Section ─────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--bg-darkest);
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--nav-height);
+    }
+
+    /* Particle / dot-grid background */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(79,142,247,0.18) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: bgPan 30s linear infinite;
+    }
+    @keyframes bgPan {
+      from { background-position: 0 0; }
+      to   { background-position: 40px 40px; }
+    }
+    .hero-glow-1 {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,142,247,0.10) 0%, transparent 70%);
+      top: -100px; left: -100px;
+    }
+    .hero-glow-2 {
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(34,211,238,0.07) 0%, transparent 70%);
+      bottom: 0; right: 100px;
+    }
+
+    /* Hero layout */
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 60px 0;
+    }
+    .hero-greeting {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-greeting::before {
+      content: '';
+      display: inline-block;
+      width: 32px; height: 2px;
+      background: var(--accent-cyan);
+    }
+    .hero-name {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      background: linear-gradient(135deg, #f1f5f9 30%, var(--accent-blue) 70%, var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 18px;
+    }
+    .hero-role {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 22px;
+      min-height: 2em;
+    }
+    .typewriter-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+    #typewriter {
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background: var(--accent-blue);
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blink 0.8s step-end infinite;
+    }
+    .hero-summary {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .hero-socials {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .hero-social-divider {
+      width: 1px; height: 24px;
+      background: var(--border);
+    }
+    .hero-social-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Right side – photo */
+    .hero-photo-side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .photo-ring-wrap {
+      position: relative;
+      width: 320px; height: 320px;
+    }
+    .photo-ring-outer {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background: linear-gradient(var(--bg-darkest), var(--bg-darkest)) padding-box,
+                  linear-gradient(135deg, var(--accent-blue), var(--accent-cyan), var(--accent-blue)) border-box;
+      animation: rotate-ring 6s linear infinite;
+    }
+    .photo-ring-outer::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(79,142,247,0.15);
+    }
+    .photo-img {
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 4px solid var(--bg-darkest);
+      position: relative;
+      z-index: 1;
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    /* Floating tech badges */
+    .tech-badge {
+      position: absolute;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-sm);
+      padding: 7px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .tech-badge i { color: var(--accent-blue); }
+    .tb-1 { top: 10px;  left: -30px;  animation: float 3.2s ease-in-out infinite; }
+    .tb-2 { top: 80px;  right: -40px; animation: float 3.8s ease-in-out infinite 0.5s; }
+    .tb-3 { bottom: 80px; left: -40px; animation: float 4.1s ease-in-out infinite 1s; }
+    .tb-4 { bottom: 20px; right: -20px; animation: float 3.5s ease-in-out infinite 1.5s; }
+
+    /* ── Stats section ────────────────────────────────── */
+    .stats-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+
+    /* ── What I Do cards ──────────────────────────────── */
+    .what-i-do-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .what-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      transition: all var(--transition);
+      text-align: center;
+    }
+    .what-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-5px);
+    }
+    .what-icon {
+      width: 60px; height: 60px;
+      margin: 0 auto 20px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(79,142,247,0.15), rgba(34,211,238,0.08));
+      border: 1px solid rgba(79,142,247,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      color: var(--accent-blue);
+    }
+    .what-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .what-desc {
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Responsive overrides */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+      .hero-greeting { justify-content: center; }
+      .hero-summary  { margin: 0 auto 32px; }
+      .hero-actions  { justify-content: center; }
+      .hero-socials  { justify-content: center; }
+      .photo-ring-wrap { width: 240px; height: 240px; }
+      .photo-img { width: 240px; height: 240px; }
+      .tb-1, .tb-2, .tb-3, .tb-4 { display: none; }
+    }
+    @media (max-width: 768px) {
+      .what-i-do-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-badge">AM</div>
+          <span class="nav-logo-text">Avinash<span>.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+          <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+          <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+          <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+          <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+          <a href="contact.html"    class="nav-link nav-cta" data-page="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+    <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+    <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+    <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+    <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+    <a href="contact.html"    class="nav-link nav-cta">Contact</a>
+  </div>
+
+  <!-- ── Hero Section ───────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Avinash<br/>Muduthanapally</h1>
+
+          <div class="hero-role">
+            <div class="typewriter-wrap">
+              <span id="typewriter">Senior Data Engineer</span><span class="cursor"></span>
+            </div>
+          </div>
+
+          <p class="hero-summary">
+            IT Professional with 11+ years of experience in ETL development, Data Engineering, and Solution Architecture, specializing in Talend and Databricks. Expert in Azure Data Factory, Azure Data Lake Storage, Azure Synapse, and cloud-based data pipelines.
+          </p>
+
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fa-solid fa-briefcase"></i> View My Work
+            </a>
+            <a href="Avinash_Muduthanapally_Resume (1).pdf" class="btn btn-secondary" target="_blank">
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="hero-social-label">Find me on</span>
+            <div class="hero-social-divider"></div>
+            <a href="https://www.linkedin.com/in/avinash-muduthanapally/" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/avvi575" target="_blank" class="social-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:avinash.muduthanapally@gmail.com" class="social-link" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Photo -->
+        <div class="hero-photo-side">
+          <div class="photo-ring-wrap">
+            <div class="photo-ring-outer"></div>
+            <img src="assets/images/profile.jpg" alt="Avinash Muduthanapally" class="photo-img" onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder').style.display='flex';" />
+            <div class="photo-placeholder" style="display:none; width:320px; height:320px; border-radius:50%; background:var(--bg-card); border:4px solid var(--bg-darkest); align-items:center; justify-content:center; font-size:5rem; color:var(--accent-blue); position:relative; z-index:1;">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <!-- Floating tech badges -->
+            <div class="tech-badge tb-1"><i class="fa-brands fa-microsoft"></i> Azure</div>
+            <div class="tech-badge tb-2"><i class="fa-solid fa-database"></i> Databricks</div>
+            <div class="tech-badge tb-3"><i class="fa-solid fa-gears"></i> Talend</div>
+            <div class="tech-badge tb-4"><i class="fa-solid fa-cloud"></i> ETL</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats Row ───────────────────────────────────────────── -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll delay-1">
+          <div class="stat-number">
+            <span data-counter data-target="11" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item animate-on-scroll delay-2">
+          <div class="stat-number">
+            <span data-counter data-target="5">0</span>
+          </div>
+          <div class="stat-label">Major Companies</div>
+        </div>
+        <div class="stat-item animate-on-scroll delay-3">
+          <div class="stat-number">
+            <span data-counter data-target="2">0</span>
+          </div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-item animate-on-scroll delay-4">
+          <div class="stat-number">
+            <span data-counter data-target="5" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label">Enterprise Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What I Do ───────────────────────────────────────────── -->
+  <section class="section" style="background: var(--bg-darkest);">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">What I Do</p>
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">End-to-end data engineering expertise across cloud platforms and enterprise ecosystems.</p>
+      </div>
+
+      <div class="what-i-do-grid">
+        <div class="what-card animate-on-scroll delay-1" data-tilt>
+          <div class="what-icon"><i class="fa-solid fa-arrows-turn-right"></i></div>
+          <h3 class="what-title">ETL Architecture</h3>
+          <p class="what-desc">Designing and developing end-to-end ETL/ELT pipelines using Talend and Azure Data Factory, with reusable frameworks and metadata-driven execution across enterprise systems.</p>
+        </div>
+        <div class="what-card animate-on-scroll delay-2" data-tilt>
+          <div class="what-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3 class="what-title">Cloud Data Pipelines</h3>
+          <p class="what-desc">Building scalable data solutions on Azure using Databricks, ADLS, and Synapse with Medallion Architecture (Bronze/Silver/Gold layers) to support analytics and BI workloads.</p>
+        </div>
+        <div class="what-card animate-on-scroll delay-3" data-tilt>
+          <div class="what-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3 class="what-title">Technical Leadership</h3>
+          <p class="what-desc">Leading cross-functional data engineering teams, managing onshore/offshore client interactions, driving Agile/Kanban delivery with zero-escalation track records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Strip ────────────────────────────────────────────── -->
+  <section style="background: var(--bg-secondary); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding: 56px 0;">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:700; margin-bottom:6px;">Looking for a Senior Data Engineer?</h3>
+        <p style="color:var(--text-secondary); font-size:0.93rem;">Available for senior roles and freelance consulting engagements.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">
+        <i class="fa-solid fa-paper-plane"></i> Let's Talk
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Avinash Muduthanapally. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

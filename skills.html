@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills – Avinash Muduthanapally</title>
+  <meta name="description" content="Technical skills of Avinash Muduthanapally – Talend, Azure Databricks, ADF, SQL, DevOps, and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .proficiency-section {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .proficiency-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 48px;
+    }
+
+    @media (max-width: 1024px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .proficiency-col { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-badge">AM</div>
+          <span class="nav-logo-text">Avinash<span>.</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+          <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+          <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+          <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+          <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+          <a href="contact.html"    class="nav-link nav-cta" data-page="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"      class="nav-link" data-page="index.html">Home</a>
+    <a href="about.html"      class="nav-link" data-page="about.html">About</a>
+    <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+    <a href="projects.html"   class="nav-link" data-page="projects.html">Projects</a>
+    <a href="skills.html"     class="nav-link" data-page="skills.html">Skills</a>
+    <a href="contact.html"    class="nav-link nav-cta">Contact</a>
+  </div>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Skills</span>
+      </div>
+      <h1 class="page-hero-title">Technical <span class="accent-blue">Skills</span></h1>
+      <p class="page-hero-subtitle">A comprehensive toolkit built across 11+ years of enterprise data engineering.</p>
+    </div>
+  </section>
+
+  <!-- ── Skill Category Cards ───────────────────────────────── -->
+  <section class="section" style="background: var(--bg-primary);">
+    <div class="container">
+
+      <div class="section-header animate-on-scroll">
+        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Expertise Areas</p>
+        <h2 class="section-title">Skill Categories</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- ETL Tools -->
+        <div class="skill-cat-card animate-on-scroll delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fa-solid fa-arrows-turn-right"></i></div>
+            <div>
+              <div class="skill-cat-name">ETL Tools</div>
+              <div class="skill-cat-count">3 technologies</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-cyan">Talend Data Integration</span>
+            <span class="tag tag-cyan">Talend Big Data</span>
+            <span class="tag tag-cyan">Talend Cloud</span>
+            <span class="tag">Azure Data Factory (ADF)</span>
+            <span class="tag">Azure Databricks</span>
+            <span class="tag">In-House Engine Jobs</span>
+          </div>
+        </div>
+
+        <!-- Cloud & Storage -->
+        <div class="skill-cat-card animate-on-scroll delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fa-solid fa-cloud"></i></div>
+            <div>
+              <div class="skill-cat-name">Cloud &amp; Storage</div>
+              <div class="skill-cat-count">3 platforms</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-gold">Azure Data Lake Storage</span>
+            <span class="tag tag-gold">Azure Synapse Analytics</span>
+            <span class="tag">AWS S3</span>
+            <span class="tag">Delta Live Tables</span>
+            <span class="tag">Medallion Architecture</span>
+            <span class="tag">Bronze / Silver / Gold</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-cat-card animate-on-scroll delay-3">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fa-solid fa-database"></i></div>
+            <div>
+              <div class="skill-cat-name">Databases</div>
+              <div class="skill-cat-count">4 systems</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Oracle</span>
+            <span class="tag">Microsoft SQL Server</span>
+            <span class="tag">Amazon Redshift</span>
+            <span class="tag tag-cyan">Azure Synapse</span>
+            <span class="tag">Salesforce</span>
+            <span class="tag">Stored Procedures</span>
+            <span class="tag">SCD Type-1/2/3</span>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skill-cat-card animate-on-scroll delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <div class="skill-cat-name">Languages</div>
+              <div class="skill-cat-count">2 languages</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-green">SQL</span>
+            <span class="tag tag-green">PL/SQL</span>
+            <span class="tag">Data Modeling</span>
+            <span class="tag">ER Diagrams</span>
+            <span class="tag">Performance Tuning</span>
+          </div>
+        </div>
+
+        <!-- DevOps & CI/CD -->
+        <div class="skill-cat-card animate-on-scroll delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div>
+              <div class="skill-cat-name">DevOps &amp; CI/CD</div>
+              <div class="skill-cat-count">6 tools</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-purple">Jenkins</span>
+            <span class="tag tag-purple">XL Release</span>
+            <span class="tag tag-purple">XL Deploy</span>
+            <span class="tag">Azure DevOps</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Bitbucket</span>
+            <span class="tag">Nexus Repository</span>
+          </div>
+        </div>
+
+        <!-- Scheduling & Tools -->
+        <div class="skill-cat-card animate-on-scroll delay-3">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <div class="skill-cat-name">Scheduling &amp; Tools</div>
+              <div class="skill-cat-count">4 tools</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Control M</span>
+            <span class="tag">TAC (Talend Admin Console)</span>
+            <span class="tag tag-cyan">Jira</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Power Automate</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Proficiency Bars ───────────────────────────────── -->
+      <div class="section-header animate-on-scroll" style="margin-top: 16px;">
+        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Proficiency</p>
+        <h2 class="section-title">Skill Levels</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Estimated proficiency based on 11+ years of hands-on project delivery.</p>
+      </div>
+
+      <div class="proficiency-section">
+        <div class="proficiency-col">
+
+          <!-- Left column -->
+          <div>
+            <div class="skill-bar-wrap animate-on-scroll delay-1">
+              <div class="skill-bar-label">
+                <span>Talend (DI / Big Data / Cloud)</span>
+                <span class="accent-blue">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-2">
+              <div class="skill-bar-label">
+                <span>SQL / PL-SQL</span>
+                <span class="accent-blue">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-3">
+              <div class="skill-bar-label">
+                <span>Azure Data Factory</span>
+                <span class="accent-blue">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-4">
+              <div class="skill-bar-label">
+                <span>Azure Databricks</span>
+                <span class="accent-blue">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-5">
+              <div class="skill-bar-label">
+                <span>Azure Data Lake Storage</span>
+                <span class="accent-blue">88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div>
+            <div class="skill-bar-wrap animate-on-scroll delay-1">
+              <div class="skill-bar-label">
+                <span>Oracle / MSSQL</span>
+                <span class="accent-blue">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-2">
+              <div class="skill-bar-label">
+                <span>AWS S3</span>
+                <span class="accent-blue">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-3">
+              <div class="skill-bar-label">
+                <span>Azure Synapse Analytics</span>
+                <span class="accent-blue">83%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="83"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-4">
+              <div class="skill-bar-label">
+                <span>Jenkins / CI-CD</span>
+                <span class="accent-blue">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-wrap animate-on-scroll delay-5">
+              <div class="skill-bar-label">
+                <span>Data Modeling / ER Design</span>
+                <span class="accent-blue">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Soft Skills ─────────────────────────────────────────── -->
+  <section class="section" style="background: var(--bg-secondary); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Leadership</p>
+        <h2 class="section-title">Professional Skills</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:16px; max-width:960px; margin:0 auto;">
+        <div class="card animate-on-scroll delay-1" style="text-align:center; padding:24px 16px;">
+          <i class="fa-solid fa-people-group" style="font-size:1.6rem; color:var(--accent-blue); margin-bottom:12px; display:block;"></i>
+          <div style="font-weight:600; font-size:0.93rem; margin-bottom:6px;">Team Leadership</div>
+          <div style="font-size:0.82rem; color:var(--text-muted);">Led teams of 10+ engineers across onshore and offshore delivery</div>
+        </div>
+        <div class="card animate-on-scroll delay-2" style="text-align:center; padding:24px 16px;">
+          <i class="fa-solid fa-comments" style="font-size:1.6rem; color:var(--accent-blue); margin-bottom:12px; display:block;"></i>
+          <div style="font-weight:600; font-size:0.93rem; margin-bottom:6px;">Client Communication</div>
+          <div style="font-size:0.82rem; color:var(--text-muted);">Direct interaction with enterprise clients across multiple geographies</div>
+        </div>
+        <div class="card animate-on-scroll delay-3" style="text-align:center; padding:24px 16px;">
+          <i class="fa-solid fa-triangle-exclamation" style="font-size:1.6rem; color:var(--accent-blue); margin-bottom:12px; display:block;"></i>
+          <div style="font-weight:600; font-size:0.93rem; margin-bottom:6px;">Zero Escalation Record</div>
+          <div style="font-size:0.82rem; color:var(--text-muted);">Consistent track record of zero escalations across all engagements</div>
+        </div>
+        <div class="card animate-on-scroll delay-4" style="text-align:center; padding:24px 16px;">
+          <i class="fa-solid fa-list-check" style="font-size:1.6rem; color:var(--accent-blue); margin-bottom:12px; display:block;"></i>
+          <div style="font-weight:600; font-size:0.93rem; margin-bottom:6px;">Agile / Kanban</div>
+          <div style="font-size:0.82rem; color:var(--text-muted);">Experience managing sprints, user stories, and Azure DevOps boards</div>
+        </div>
+        <div class="card animate-on-scroll delay-5" style="text-align:center; padding:24px 16px;">
+          <i class="fa-solid fa-magnifying-glass-chart" style="font-size:1.6rem; color:var(--accent-blue); margin-bottom:12px; display:block;"></i>
+          <div style="font-weight:600; font-size:0.93rem; margin-bottom:6px;">Requirements Analysis</div>
+          <div style="font-size:0.82rem; color:var(--text-muted);">BRD analysis, STM mapping review, and ETL specification authoring</div>
+        </div>
+        <div class="card animate-on-scroll delay-1" style="text-align:center; padding:24px 16px;">
+          <i class="fa-solid fa-lightbulb" style="font-size:1.6rem; color:var(--accent-blue); margin-bottom:12px; display:block;"></i>
+          <div style="font-weight:600; font-size:0.93rem; margin-bottom:6px;">Solution Architecture</div>
+          <div style="font-size:0.82rem; color:var(--text-muted);">End-to-end data architecture design for enterprise supply chain and analytics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Certifications ─────────────────────────────────────── -->
+  <section class="section" style="background: var(--bg-primary); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <p style="font-size:0.82rem; color:var(--accent-cyan); font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px;">Credentials</p>
+        <h2 class="section-title">Certifications</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(340px,1fr)); gap:20px; max-width:800px; margin:0 auto;">
+        <div class="cert-card animate-on-scroll delay-1">
+          <div class="cert-icon cert-icon-talend">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div>
+            <div class="cert-name">Talend Data Integration Certified Developer</div>
+            <div class="cert-issuer" style="margin-top:6px;">Talend &nbsp;&middot;&nbsp; ETL &amp; Data Integration</div>
+            <div style="margin-top:10px;">
+              <span class="tag tag-cyan" style="font-size:0.72rem;">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card animate-on-scroll delay-2">
+          <div class="cert-icon cert-icon-databricks">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <div class="cert-name">Databricks Certified Data Engineer Associate</div>
+            <div class="cert-issuer" style="margin-top:6px;">Databricks &nbsp;&middot;&nbsp; Cloud Data Engineering</div>
+            <div style="margin-top:10px;">
+              <span class="tag tag-gold" style="font-size:0.72rem;">Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Avinash Muduthanapally. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
