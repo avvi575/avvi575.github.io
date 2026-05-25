@@ -39,7 +39,8 @@
 
   /* ── 3. Active nav link detection ──────────────────────── */
   (function setActiveNav() {
-    const page = window.location.pathname.split('/').pop() || 'index.html';
+    const raw = window.location.pathname.split('/').pop() || 'index.html';
+    const page = raw.replace('.html', '') || 'index';
     document.querySelectorAll('.nav-link[data-page]').forEach(link => {
       if (link.dataset.page === page) {
         link.classList.add('active');
