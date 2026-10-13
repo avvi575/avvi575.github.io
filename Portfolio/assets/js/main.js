@@ -54,8 +54,8 @@
     const roles = [
       'Senior Data Engineer',
       'ETL Architect',
+      'Full Stack Developer',
       'Technical Lead',
-      'Databricks Expert',
       'Solution Architect'
     ];
     let roleIndex = 0;

@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avinash Muduthanapally – Senior Data Engineer</title>
-  <meta name="description" content="Senior Data Engineer with 11+ years of experience in ETL, Azure Databricks, Talend, and cloud data pipelines." />
+  <title>Avinash Muduthanapally – Senior Data Engineer & Full Stack Developer</title>
+  <meta name="description" content="Senior Data Engineer & Full Stack Developer with 11+ years in ETL, Azure Databricks, Talend, cloud data pipelines. Building full-stack web & mobile apps including Family Expense Tracker (NestJS + React + Kotlin + Python)." />
 
   <!-- Open Graph / LinkedIn preview -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://avvi575.github.io/Portfolio/" />
-  <meta property="og:title"       content="Avinash Muduthanapally – Senior Data Engineer" />
-  <meta property="og:description" content="11+ years in ETL development, Data Engineering &amp; Solution Architecture. Expert in Talend, Azure Databricks, ADF, and cloud-based data pipelines." />
+  <meta property="og:title"       content="Avinash Muduthanapally – Senior Data Engineer & Full Stack Developer" />
+  <meta property="og:description" content="11+ years in ETL, Talend, Azure Databricks, plus full-stack development (NestJS, React, Kotlin, Python). Creator of Family Expense Tracker." />
   <meta property="og:image"       content="https://avvi575.github.io/Portfolio/assets/images/profile.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Avinash Muduthanapally – Senior Data Engineer" />
-  <meta name="twitter:description" content="11+ years in ETL, Talend, Azure Databricks, and cloud data pipelines." />
+  <meta name="twitter:title"       content="Avinash Muduthanapally – Senior Data Engineer & Full Stack Developer" />
+  <meta name="twitter:description" content="11+ years in ETL, Talend, Azure Databricks, plus full-stack development (NestJS, React, Kotlin, Python)." />
   <meta name="twitter:image"       content="https://avvi575.github.io/Portfolio/assets/images/profile.jpg" />
 
   <!-- Google Fonts -->
@@ -241,7 +241,7 @@
     /* What I Do */
     .what-i-do-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
     .what-card {
@@ -333,6 +333,8 @@
     .stats-dark .stat-item:hover { background: rgba(255,255,255,0.12); }
     .stats-dark .stat-number span { background: linear-gradient(135deg, #ffffff, #93c5fd); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .stats-dark .stat-label { color: rgba(255,255,255,0.65); }
+    .stats-grid { grid-template-columns: repeat(5, 1fr); }
+    @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
 
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
@@ -343,7 +345,7 @@
       .photo-ring-wrap { width: 240px; height: 240px; }
       .photo-img { width: 240px; height: 240px; }
       .photo-placeholder { width: 240px; height: 240px; }
-      .tb-1, .tb-2, .tb-3, .tb-4 { display: none; }
+      .tb-1, .tb-2, .tb-3, .tb-4, .tb-5, .tb-6 { display: none; }
     }
     @media (max-width: 768px) {
       .what-i-do-grid { grid-template-columns: 1fr; }
@@ -409,12 +411,15 @@
           </div>
 
           <p class="hero-summary">
-            IT Professional with 11+ years of experience in ETL development, Data Engineering, and Solution Architecture, specializing in Talend and Databricks. Expert in Azure Data Factory, Azure Data Lake Storage, Azure Synapse, and cloud-based data pipelines.
+            IT Professional with 11+ years of experience in ETL development, Data Engineering, and Solution Architecture, specializing in Talend and Databricks. Expert in Azure Data Factory, Azure Data Lake Storage, Azure Synapse, and cloud-based data pipelines. By night, building full-stack web &amp; mobile applications — creator of <a href="https://github.com/avvi575/family-expense-tracker" target="_blank" style="color:var(--accent-blue); font-weight:600;">Family Expense Tracker</a> (NestJS + React + Kotlin + Python).
           </p>
 
           <div class="hero-actions">
             <a href="projects.html" class="btn btn-primary">
               <i class="fa-solid fa-briefcase"></i> View My Work
+            </a>
+            <a href="https://github.com/avvi575/family-expense-tracker" class="btn btn-secondary" target="_blank">
+              <i class="fa-brands fa-github"></i> Family Expense Tracker
             </a>
             <a href="Avinash_Muduthanapally_Resume (1).pdf" class="btn btn-secondary" target="_blank">
               <i class="fa-solid fa-download"></i> Download Resume
@@ -450,6 +455,8 @@
             <div class="tech-badge tb-2"><i class="fa-solid fa-database"></i> Databricks</div>
             <div class="tech-badge tb-3"><i class="fa-solid fa-gears"></i> Talend</div>
             <div class="tech-badge tb-4"><i class="fa-solid fa-cloud"></i> ETL</div>
+            <div class="tech-badge tb-5" style="top: 140px; left: -30px;"><i class="fa-brands fa-js"></i> NestJS</div>
+            <div class="tech-badge tb-6" style="bottom: 100px; right: -30px;"><i class="fa-brands fa-react"></i> React</div>
           </div>
         </div>
 
@@ -479,11 +486,17 @@
           </div>
           <div class="stat-label">Certifications</div>
         </div>
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="320">
+         <div class="stat-item" data-aos="fade-up" data-aos-delay="320">
           <div class="stat-number">
             <span data-counter data-target="5" data-suffix="+">0</span>
           </div>
           <div class="stat-label">Enterprise Clients</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-number">
+            <span data-counter data-target="3" data-suffix="+">0</span>
+          </div>
+          <div class="stat-label">Open Source Projects</div>
         </div>
       </div>
     </div>
@@ -515,6 +528,61 @@
           <h3 class="what-title">Technical Leadership</h3>
           <p class="what-desc">Leading cross-functional data engineering teams, managing onshore/offshore client interactions, driving Agile/Kanban delivery with zero-escalation track records.</p>
         </div>
+        <div class="what-card" data-aos="fade-up" data-aos-delay="320" data-tilt>
+          <div class="what-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="what-title">Full Stack Development</h3>
+          <p class="what-desc">Building modern web &amp; mobile applications: NestJS APIs, React + Tailwind frontends, Kotlin Android apps, and Python data parsers. Creator of Family Expense Tracker.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured Project ────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p style="font-size:0.78rem; color:var(--accent-blue); font-weight:700; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Featured Project</p>
+        <h2 class="section-title">Family Expense Tracker</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">A full-stack expense management app built for families — NestJS API, React + Tailwind dashboard, Kotlin Android client, and a Python bank-statement parser.</p>
+      </div>
+
+      <div class="project-card featured-project" data-aos="fade-up" data-tilt>
+        <div class="project-header">
+          <div class="project-name">Family Expense Tracker</div>
+          <span class="project-client-badge tag" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">Personal Project</span>
+        </div>
+        <div class="project-period">
+          <i class="fa-solid fa-calendar"></i> Apr 2025 – Present &nbsp;|&nbsp;
+          <i class="fa-solid fa-code-branch"></i> Open Source
+        </div>
+        <p class="project-desc">
+          Full-stack expense tracker for families featuring multi-user accounts with roles (Admin/Member/Viewer), recurring expenses with auto-materialization, budget alerts, savings goals, notification feeds, and a reconciliation workflow for imported bank/credit-card statements. Built with JWT auth, PostgreSQL, Prisma ORM, multer uploads, nodemailer, and a Python PDF parser supporting 15+ Indian bank/card formats.
+        </p>
+        <ul class="project-achievements">
+          <li>Dual-stack: NestJS backend API serving both web dashboard and Android Kotlin client from a single codebase.</li>
+          <li>Multi-schema PostgreSQL design separating raw imports from finalized expenses for safe concurrent editing.</li>
+          <li>Python cc-parser library with bank-specific profiles (HDFC, ICICI, SBI, Axis, HSBC, etc.) using pdfplumber for PDF extraction.</li>
+          <li>Dashboard with date-range filtering, aggregation granularity (Daily/Weekly/Monthly), and contributor breakdown.</li>
+        </ul>
+        <div class="tags-row">
+          <span class="tag">NestJS</span>
+          <span class="tag">React</span>
+          <span class="tag">Kotlin</span>
+          <span class="tag">Python</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Prisma</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">JWT Auth</span>
+        </div>
+        <div class="hero-actions" style="margin-top:24px;">
+          <a href="https://github.com/avvi575/family-expense-tracker" class="btn btn-primary" target="_blank">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+          <a href="projects.html" class="btn btn-secondary">
+            <i class="fa-solid fa-briefcase"></i> More Projects
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -538,8 +606,8 @@
     <div class="container">
       <div class="cta-inner">
         <div>
-          <h3>Looking for a Senior Data Engineer?</h3>
-          <p>Available for senior roles and freelance consulting engagements.</p>
+          <h3>Senior Data Engineer &amp; Full Stack Developer?</h3>
+          <p>Available for senior roles, tech-lead positions, and freelance consulting engagements.</p>
         </div>
         <a href="contact.html" class="btn-white">
           <i class="fa-solid fa-paper-plane"></i> Let's Talk

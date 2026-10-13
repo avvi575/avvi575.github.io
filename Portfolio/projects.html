@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects – Avinash Muduthanapally</title>
-  <meta name="description" content="Key projects by Avinash Muduthanapally – enterprise data engineering solutions for Zeus, Petronas, Merck, J&J, and United Health Group." />
+  <meta name="description" content="Key projects by Avinash Muduthanapally – enterprise data engineering for Zeus, Petronas, Merck, J&J, UHG, plus the open-source Family Expense Tracker." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://avvi575.github.io/Portfolio/projects.html" />
-  <meta property="og:title"       content="Projects – Avinash Muduthanapally | Senior Data Engineer" />
-  <meta property="og:description" content="Enterprise data engineering projects: Zeus, Petronas, Merck, Johnson &amp; Johnson, United Health Group — Talend, Databricks, ADF." />
+  <meta property="og:title"       content="Projects – Avinash Muduthanapally | Senior Data Engineer & Full Stack Developer" />
+  <meta property="og:description" content="Enterprise data engineering for Zeus, Petronas, Merck, J&amp;J, UHG, plus open-source Family Expense Tracker (NestJS, React, Kotlin, Python)." />
   <meta property="og:image"       content="https://avvi575.github.io/Portfolio/assets/images/profile.jpg" />
   <meta name="twitter:card"       content="summary_large_image" />
 
@@ -274,6 +274,55 @@
     </div>
   </section>
 
+  <!-- ── Personal Projects ────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p style="font-size:0.78rem; color:var(--accent-blue); font-weight:700; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:10px;">Open Source</p>
+        <h2 class="section-title">Personal Projects</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Passion projects where I apply enterprise-grade engineering outside of work.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card project-card-full" data-aos="fade-up" data-tilt>
+          <div class="project-header">
+            <div class="project-name">Family Expense Tracker</div>
+            <span class="project-client-badge tag" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">Open Source</span>
+          </div>
+          <div class="project-period">
+            <i class="fa-solid fa-calendar"></i> Apr 2025 – Present &nbsp;|&nbsp; <i class="fa-solid fa-code-branch"></i>&nbsp; Public
+          </div>
+          <p class="project-desc">
+            A full-stack expense management application built for families. Supports multi-user accounts with Admin/Member/Viewer roles, recurring expenses with auto-materialization, budget alerts, savings goals, notification feeds, and a reconciliation workflow for bank/credit-card statement imports.
+          </p>
+          <ul class="project-achievements">
+            <li>NestJS backend (TypeScript, PostgreSQL, Prisma) serving both a React + Tailwind dashboard and a Kotlin Android client.</li>
+            <li>Multi-schema PostgreSQL design separating raw imports from finalized expenses for safe concurrent editing.</li>
+            <li>Custom Python PDF parser with 15+ bank profiles (HDFC, ICICI, SBI, Axis, HSBC, etc.) using pdfplumber for statement extraction.</li>
+            <li>Dashboard with date-range filtering, aggregation granularity (Daily/Weekly/Monthly/Quarterly), and per-contributor breakdown.</li>
+            <li>Jwt-based authentication with family-scoped authorization and JWT refresh-token rotation.</li>
+          </ul>
+          <div class="tags-row">
+            <span class="tag tag-cyan">NestJS</span>
+            <span class="tag tag-cyan">React</span>
+            <span class="tag tag-cyan">Kotlin</span>
+            <span class="tag tag-cyan">Python</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">JWT Auth</span>
+          </div>
+          <div class="hero-actions" style="margin-top:24px;">
+            <a href="https://github.com/avvi575/family-expense-tracker" class="btn btn-primary" target="_blank">
+              <i class="fa-brands fa-github"></i> View Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Technologies Section ───────────────────────────────── -->
   <section class="section" style="background: var(--bg-secondary); border-top:1px solid var(--border);">
     <div class="container">
@@ -284,32 +333,39 @@
         <p class="section-subtitle">The complete technology landscape across all enterprise projects.</p>
       </div>
 
-      <div class="tech-strip" data-aos="fade-up">
-        <div class="tech-chip"><i class="fa-solid fa-gears"></i> Talend Data Integration</div>
-        <div class="tech-chip"><i class="fa-solid fa-gears"></i> Talend Cloud</div>
-        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Data Factory</div>
-        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Databricks</div>
-        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Data Lake Storage</div>
-        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Synapse Analytics</div>
-        <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure DevOps</div>
-        <div class="tech-chip"><i class="fa-brands fa-aws"></i> AWS S3</div>
-        <div class="tech-chip"><i class="fa-solid fa-database"></i> Oracle</div>
-        <div class="tech-chip"><i class="fa-solid fa-database"></i> Microsoft SQL Server</div>
-        <div class="tech-chip"><i class="fa-solid fa-database"></i> Amazon Redshift</div>
-        <div class="tech-chip"><i class="fa-solid fa-cloud"></i> Salesforce</div>
-        <div class="tech-chip"><i class="fa-solid fa-code"></i> SQL / PL-SQL</div>
-        <div class="tech-chip"><i class="fa-solid fa-code-branch"></i> Delta Live Tables</div>
-        <div class="tech-chip"><i class="fa-solid fa-layer-group"></i> Medallion Architecture</div>
-        <div class="tech-chip"><i class="fa-brands fa-jenkins"></i> Jenkins</div>
-        <div class="tech-chip"><i class="fa-brands fa-github"></i> GitHub</div>
-        <div class="tech-chip"><i class="fa-brands fa-bitbucket"></i> Bitbucket</div>
-        <div class="tech-chip"><i class="fa-solid fa-boxes-stacked"></i> Nexus Repository</div>
-        <div class="tech-chip"><i class="fa-solid fa-calendar-check"></i> Control M</div>
-        <div class="tech-chip"><i class="fa-solid fa-list-check"></i> Jira</div>
-        <div class="tech-chip"><i class="fa-solid fa-paper-plane"></i> Postman</div>
-        <div class="tech-chip"><i class="fa-solid fa-bolt"></i> Power Automate</div>
-        <div class="tech-chip"><i class="fa-solid fa-robot"></i> AI Configuration</div>
-      </div>
+       <div class="tech-strip" data-aos="fade-up">
+         <div class="tech-chip"><i class="fa-solid fa-gears"></i> Talend Data Integration</div>
+         <div class="tech-chip"><i class="fa-solid fa-gears"></i> Talend Cloud</div>
+         <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Data Factory</div>
+         <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Databricks</div>
+         <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Data Lake Storage</div>
+         <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure Synapse Analytics</div>
+         <div class="tech-chip"><i class="fa-brands fa-microsoft"></i> Azure DevOps</div>
+         <div class="tech-chip"><i class="fa-brands fa-aws"></i> AWS S3</div>
+         <div class="tech-chip"><i class="fa-solid fa-database"></i> Oracle</div>
+         <div class="tech-chip"><i class="fa-solid fa-database"></i> Microsoft SQL Server</div>
+         <div class="tech-chip"><i class="fa-solid fa-database"></i> Amazon Redshift</div>
+         <div class="tech-chip"><i class="fa-solid fa-cloud"></i> Salesforce</div>
+         <div class="tech-chip"><i class="fa-solid fa-code"></i> SQL / PL-SQL</div>
+         <div class="tech-chip"><i class="fa-solid fa-code-branch"></i> Delta Live Tables</div>
+         <div class="tech-chip"><i class="fa-solid fa-layer-group"></i> Medallion Architecture</div>
+         <div class="tech-chip"><i class="fa-brands fa-jenkins"></i> Jenkins</div>
+         <div class="tech-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+         <div class="tech-chip"><i class="fa-brands fa-bitbucket"></i> Bitbucket</div>
+         <div class="tech-chip"><i class="fa-solid fa-boxes-stacked"></i> Nexus Repository</div>
+         <div class="tech-chip"><i class="fa-solid fa-calendar-check"></i> Control M</div>
+         <div class="tech-chip"><i class="fa-solid fa-list-check"></i> Jira</div>
+         <div class="tech-chip"><i class="fa-solid fa-paper-plane"></i> Postman</div>
+         <div class="tech-chip"><i class="fa-solid fa-bolt"></i> Power Automate</div>
+         <div class="tech-chip"><i class="fa-solid fa-robot"></i> AI Configuration</div>
+         <!-- Full Stack -->
+         <div class="tech-chip"><i class="fa-brands fa-js"></i> NestJS</div>
+         <div class="tech-chip"><i class="fa-brands fa-react"></i> React</div>
+         <div class="tech-chip"><i class="fa-brands fa-android"></i> Kotlin</div>
+         <div class="tech-chip"><i class="fa-brands fa-python"></i> Python</div>
+         <div class="tech-chip"><i class="fa-solid fa-database"></i> Prisma ORM</div>
+         <div class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Tailwind CSS</div>
+       </div>
     </div>
   </section>
 
