@@ -198,14 +198,28 @@
     skillBars.forEach(bar => barObserver.observe(bar));
   }
 
-  /* ── 10. Contact form – simple validation & feedback ─────── */
+  /* ── 10. Contact form – submit via the visitor's email client ─── */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+      const val = id => (contactForm.querySelector('#' + id)?.value || '').trim();
+      const name = [val('firstName'), val('lastName')].filter(Boolean).join(' ');
+      const email = val('email');
+      const subject = val('subject') || 'Portfolio enquiry';
+      const message = val('message');
+      const body = ['Name: ' + name, 'Email: ' + email, '', message].join('\n');
+      window.location.href =
+        'mailto:avinash.muduthanapally@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
       const btn = contactForm.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
+      btn.innerHTML = '<i class="fa-solid fa-envelope-open-text"></i> Opening your email app…';
       btn.disabled = true;
       btn.style.opacity = '0.8';
       setTimeout(() => {
@@ -213,7 +227,7 @@
         btn.disabled = false;
         btn.style.opacity = '';
         contactForm.reset();
-      }, 3000);
+      }, 4000);
     });
   }
 
